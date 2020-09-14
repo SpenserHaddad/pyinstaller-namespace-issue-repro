@@ -3,7 +3,7 @@ Demonstrate issue using namespace packages in PyInstaller
 
 PyInstaller 4.0 has an issue where namespace packages are not distinguished
 from regular packages, so using them to dynamically add packages ([as described
-in the guide on PyPA](https://packaging.python.org/guides/packaging-namespace-packages/)
+in the guide on PyPA](https://packaging.python.org/guides/packaging-namespace-packages/))
 fails. The namespace packages are not visible when dynamically querying them.
 
 This repo provides a minimal example showing the issue. It provides two
