@@ -24,13 +24,20 @@ $ pip install submod_b/
 # Run as Python script (w/ found output)
 $ python run.py
 
+# Print namespace package...
+# <module 'subpackages' (namespace)>
 # Print submodule data...
 # Hello from submodule A!!!
 # Hello from submodule B!!!
+# Print submod_b output...
+# Hello from submodule B!!!
 
 # Create and run PyInstaller executable (w/ found output)
-$ pyinstaller --onefile -n pyi_ns_issue run.py
+$ pyinstaller --clean --onedir --noupx --noconfirm -n pyi_ns_issue run.py
 $ dist/pyi_ns_issue 
 
+# Print namespace package...
+# <module 'subpackages' from '/home/spenser/pyinstaller-namespace-issue-repro/dist/pyi_ns_issue/subpackages/__init__.pyc'>
 # Print submodule data...
-
+# Print submod_b output...
+# Hello from submodule B!!!
